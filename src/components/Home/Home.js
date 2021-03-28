@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CategoryContext } from '../../App';
+import Categories from '../Categories/Categories';
 import './Home.css'
 const Home = () => {
+    const category = useContext(CategoryContext);
     return (
-        <div>
-            <h1>This is Home</h1>
+        <div className= 'home'>
+            <h1>This is Home: {category}</h1>
+            <Categories></Categories>
         </div>
     );
 };
